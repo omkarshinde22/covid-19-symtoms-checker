@@ -1,4 +1,4 @@
-﻿# Medicare Locator built with the Rasa Stack
+﻿# Corona Test built with the Rasa Stack
 
 ## 🏥 Introduction
 
@@ -6,17 +6,16 @@ This is an open source starter pack for developers to show how to automate full 
 
 It supports the following user goals:
 
-- Searching for a hospital, nursing home or home health agency in a US city.
+- Provide a test to patient to understand their health condition.
 - Handling basic chitchat.
 
-## 💾 How to install and setup Medicare Locator
+## 💾 How to install and setup Corona Test
 
-**Step 1**: To install Medicare Locator, please clone the repo:
+**Step 1**: To install Corona Test, please clone the repo:
 ```
-git clone https://github.com/RasaHQ/medicare_locator.git
-cd medicare_locator
+git clone https://github.com/omkarshinde22/omkarshinde22-hotmail.com.git
 ```
-The Medicare Locator uses **Python 3.5 and 3.6** and has not been tested with other versions.
+The Corona Test uses **Python 3.6 and 3.7** and has not been tested with other versions.
 Use the requirements.txt file to install the appropriate dependencies
 via pip. If you do not have pip installed yet first do:
 ```
@@ -36,7 +35,7 @@ python3 -m spacy download en
 
 This will install the bot and all of its requirements.
 
-## 🤖 How to run Medicare Locator
+## 🤖 How to run Corona Test
 
 **Step 1**: Train the core model by running:
 ```
@@ -55,7 +54,7 @@ This will train the NLU model and store it inside the `/models/current/nlu` fold
 make action-server
 ```
 
-**Step 4**: Now to test the Medicare Locator with both these models you can run:
+**Step 4**: Now to test the Corona Test with both these models you can run:
 ```
 make cmdline
 ```
@@ -69,12 +68,11 @@ An example conversation in the command line could look something like this:
 Your input ->  Hi
 Hi. What are you looking for ?
 Buttons:
-1: Hospital (/inform{"selected_type_slot": "rbry-mqwu"})
-2: Nursing Home (/inform{"selected_type_slot": "b27b-2uc7"})
-3: Home Health Agency (/inform{"selected_type_slot": "9wzi-peqs"})
-Your input ->  /inform{"selected_type_slot": "rbry-mqwu"}
-What is you current city?
-Your input ->  Seattle
+1: Sure (/inform{"corona": "sure"})
+2: Not now (/inform{"corona": "not now"})
+
+Your input ->  /inform{"corona": "sure"}
+
 ...
 ```
 
@@ -85,13 +83,13 @@ Find help for this in the [Rasa Docs](https://rasa.com/docs/).
 A helpful option to extend training data and get to know your bot is interactive learning,
 here you can correct your bot at every step in the conversation and automatically save the data for future training.
 
-**Step 5**: To run Medicare Locator in interactive learning mode run:
+**Step 5**: To run Corona Test in interactive learning mode run:
 ```
 make interactive
 ```
 
 ## 📱 Use Telegram as Chat platform
-In order to chat to the Medicare Locator through Telegram you can do the following:
+In order to chat to the Corona Test through Telegram you can do the following:
 
 **Step 1**: First if you don't already use Telegram, download it and set it up with your phone.
 Once you are registered with Telegram you start by setting up a Telegram bot.
@@ -126,16 +124,8 @@ make telegram
 Detailed information about this can also be found in the [Rasa Docs](https://rasa.com/docs/core/connectors/#telegram-connector).
 
 
-## More about the Medicare Locator demo bot
-There are some custom actions that require connections to external services,
-specifically `FacilityForm` and `FindHealthCareAddress`. These two actions
-connect to Medicare APIs. These APIs do not require tokens or any form of authentication.
+## Get API running by install Flask
 
-For more information about Medicare APIs please visit [data.medicare.gov](https://data.medicare.gov/)
-
-If you would like to run Medicare Locator on your website, follow the instructions
-[here](https://github.com/mrbot-ai/rasa-webchat) to place the chat widget on
-your website.
 
 
 ## 👩‍💻 Overview of the files
@@ -163,7 +153,7 @@ Run `make help` to see an overview of all make commands available.
 
 `train-core` - Train the Core model.
 
-`interactive` - Run the Medicare Locator interactive learning mode.
+`interactive` - Run the Corona Test interactive learning mode.
 
 `cmdline` - Run the bot on the command line.
 
@@ -171,7 +161,4 @@ Run `make help` to see an overview of all make commands available.
 
 `telegram` - Run the bot in the Telegram channel.
 
-## :gift: License
-Licensed under the GNU General Public License v3. Copyright 2019 Rasa Technologies
-GmbH. [Copy of the license](https://github.com/RasaHQ/rasa-demo/blob/master/LICENSE).
-Licensees may convey the work under this license. There is no warranty for the work.
+
